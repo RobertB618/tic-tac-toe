@@ -6,8 +6,8 @@ function GameLayout() {
     <main className="flex flex-col h-full w-full  bg-[#171717]">
       <Header />
       <div className=" flex-1 flex w-full px-1 gap-1 ">
-         <PlayerZone />
-        <PlayerZone /> 
+         <PlayerZone player={0}/>
+        <PlayerZone player={1}/> 
       </div>
     </main>
   );
