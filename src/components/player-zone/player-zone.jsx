@@ -8,7 +8,7 @@ function PlayerZone(props) {
         <div className="flex justify-center items-center pb-8">
         <Board  {...props}/>
         </div>
-        <PlayerChat/>
+        <PlayerChat {...props} />
       </div>
     </>
   );

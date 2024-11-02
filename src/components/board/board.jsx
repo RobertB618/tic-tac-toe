@@ -1,7 +1,7 @@
 import useTicStore from "@/store";
 import Cross from "./cross";
 import Circle from "./circle";
-import { cn } from "@/lib";
+
 
 function Board({player}) {
   const cellList = new Array(9).fill(0).map((_, index) => {
