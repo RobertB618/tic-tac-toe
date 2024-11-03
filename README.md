@@ -44,6 +44,8 @@ To run this project locally, you need to have the following installed:
     ```sh
     npm install
     ```
+    pnpm install
+    
     or, if you prefer `yarn`:
     ```sh
     yarn install
