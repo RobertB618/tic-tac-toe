@@ -92,6 +92,11 @@ function ChatInput({ player }) {
         onChange={changeMessage}
         placeholder="Message"
         className="flex-grow bg-transparent text-white placeholder-gray-400 focus:outline-none"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            sendMessage()
+          }
+        }}
       />
 
       <button

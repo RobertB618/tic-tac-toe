@@ -8,7 +8,7 @@ const useTicStore = create((set, get) => ({
   
   // Initial board state, represented by a 3x3 grid flattened into an array
   // Values: 0 = empty, 1 = player 1, -1 = player 2
-  boardState: [1, 1, 0, -1, -1, 0, 0, 0, 0],
+  boardState: Array(9).fill(null),
   
   // Variable to track the current player's turn (0 = Player 1, 1 = Player 2)
   playerTurn: 0,
