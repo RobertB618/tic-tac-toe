@@ -18,11 +18,25 @@ function Header() {
       <div className="flex-1 flex justify-center items-center">
         <PlayerDisplay playerIndex={1} />
       </div>
+      <Timer />
     </header>
   );
 }
 
 export default Header;
+
+function Timer() {
+  const winner = useTicStore(state => state.winner)
+  return (
+    <div
+      className={`absolute bottom-0 inset-x-0 h-1 bg-yellow-400 scale-x-[10%] origin-left transition-transform duration-[5000ms] ease-linear ${winner
+        ? ' opacity-1 scale-x-[100%]  duration-5000 '
+        : ' opacity-0 scale-x-0 duration-0'
+        }`}
+
+    />
+  )
+}
 
 // PlayerDisplay component to display information about a specific player
 function PlayerDisplay({ playerIndex }) {
