@@ -32,7 +32,7 @@ To run this project locally, you need to have the following installed:
 ### Installation
 1. Clone the repository to your local machine:
     ```sh
-    git clone https://github.com/yourusername/your-repository-name.git
+    git clone https://github.com/RobertB618/tic-tac-toe.git
     ```
    
 2. Navigate into the project directory:
