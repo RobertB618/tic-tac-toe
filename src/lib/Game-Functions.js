@@ -31,8 +31,12 @@ export function checkWinner(boardState) {
          positive and negative values
       */
   const winnerIndex = results.findIndex((value) => Math.abs(value) === 3);
-  console.log('winnerIndex', winnerIndex);
-  if (winnerIndex === -1) return false;
+  
+    if (winnerIndex === -1) {
+    const isDraw = boardState.findIndex((cell) => cell === 0)===-1;
+    if (isDraw) return { player: -1};
+    return false;
+  }
 
   /* since Player 1 (0) has a value of 1 in each cell 
          player 1 win is equivalent to find an accumulated

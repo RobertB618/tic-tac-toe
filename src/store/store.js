@@ -8,8 +8,8 @@ const useTicStore = create((set, get) => ({
   
   // Initial board state, represented by a 3x3 grid flattened into an array
   // Values: 0 = empty, 1 = player 1, -1 = player 2
-  boardState: Array(9).fill(null),
-  
+  boardState: Array(9).fill(0),
+
   // Variable to track the current player's turn (0 = Player 1, 1 = Player 2)
   playerTurn: 0,
   
@@ -64,6 +64,10 @@ const useTicStore = create((set, get) => ({
       if (!winner) {
         // If no winner, change turn to the next player
         return set(({ playerTurn }) => ({ playerTurn: (playerTurn + 1) % 2 }));
+      }
+      if(winner.player===1)
+      {
+        return
       }
 
       // Increment the score of the winning player

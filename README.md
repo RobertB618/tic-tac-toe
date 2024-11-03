@@ -20,7 +20,7 @@ This repository contains a Tic-Tac-Toe game built using React and Zustand for st
 
 ## Live Demo
 The hosted version of this application can be accessed through **GitHub Pages**:  
-[Play Tic-Tac-Toe Live](https://yourusername.github.io/your-repository-name)
+[Play Tic-Tac-Toe Live](https://vercel.com/robertb618s-projects/tic-tac-toe)
 
 ## Getting Started
 

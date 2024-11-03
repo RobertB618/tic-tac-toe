@@ -7,7 +7,7 @@ function WinnerCombo() {
   const winner = useTicStore((state) => state.winner);
 
   // If there is no winner, return null (do not render anything)
-  if (!winner) return null;
+  if (!winner || winner.player===-1) return null;
 
   // Get the cells that form the winning combination
   const winningCells = getWinningCells(winner.winplace);

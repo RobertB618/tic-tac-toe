@@ -24,7 +24,7 @@ function PlayerStatus() {
     // If there is a winner (or a draw)
     if (winnerData) {
         // Handle draw case
-        if (winnerData === 'draw') {
+        if (winnerData.player === -1) {
             return (
                 <div className="p-3 rounded-lg bg-yellow-500/20 border border-yellow-500">
                     <div className="text-center text-lg font-bold text-yellow-400">
