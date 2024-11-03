@@ -2,7 +2,7 @@ import SendIcon from './send-icons'
 import Circle from '@/components/board/circle'
 import Cross from '@/components/board/cross'
 import { usePlayer } from '@/hooks/player-context';
-import { cn } from '@/lib';
+//import { cn } from '@/lib';
 import useTicStore from '@/store';
 import { useState } from 'react';
 import MessageBubble from './message-bubble';
@@ -11,7 +11,7 @@ import MessageBubble from './message-bubble';
 function PlayerChat() {
   const { playerIndex } = usePlayer(); // Get player index from context
   const resetGame = useTicStore(state=>state.actions.resetGame)
-  const resetChat=useTicStore(state=>state.actions.resetChat)
+  
   const chatsList = useTicStore((state) => state.chats);
   const IconPlayer = playerIndex === 0 ? Cross : Circle
   const name = playerIndex === 0 ? 'Player 1' : 'Player 2'
@@ -27,12 +27,12 @@ function PlayerChat() {
           className="bg-green-800 hover:bg-green-950 text-white text-sm font-medium px-3 py-[.8] rounded-md transition-colors"
           onClick={() => {
             resetGame(true); 
-            resetChat(); 
+            
           }}
         >
           Reset
         </button>
-
+  
       </div>
 
       <div className=" flex flex-col p-3 overflow-y-auto">
@@ -48,23 +48,6 @@ function PlayerChat() {
 }
 
 export default PlayerChat
-
-/*
-function MessageBubble2({player,message,time,playerIndex}){
-  console.log(player,playerIndex)
-  console.log(time)
-  const timeText=time.toLocaleTimeString([], {
-    hourCycle: 'h23',
-    hour: '2-digit',
-    minute: '2-digit'
-})
-
-  return <div className={cn('flex flex-col bg-red-500',player===playerIndex?'items-end self-end ':'items-start')} >
-    <p className='text-[18px]'>{message}</p>
-    <span className='text-[11px]'>{timeText}</span>
-  </div>
-
-}*/
 
 
 function ChatInput({player}){

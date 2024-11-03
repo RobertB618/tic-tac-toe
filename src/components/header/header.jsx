@@ -5,6 +5,7 @@ import Circle from '@/components/board/circle'
 
 
 function Header() {
+  const winner=useTicStore(state=>state.winner)
   return (
     <header className="relative flex inset-x-0 h-[5rem] border-b-[1px] border-[#313131] bg-[#171717]">
       <div className="flex-1 flex justify-center items-center">
@@ -16,9 +17,12 @@ function Header() {
       <div className="flex-1 flex justify-center items-center">
         <PlayerDisplay playerIndex={1} />
       </div>
+
+    
     </header>
   )
 }
+
 
 export default Header
 function PlayerDisplay({ playerIndex }) {

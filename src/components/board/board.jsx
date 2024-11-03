@@ -2,6 +2,7 @@ import useTicStore from "@/store";
 import Cross from "./cross";
 import Circle from "./circle";
 import { usePlayer } from '@/hooks/player-context';
+import WinnerCombo from "./winner-combo"
 
 function Board() {
   const cellList = new Array(9).fill(0).map((_, index) => {
@@ -9,7 +10,8 @@ function Board() {
   });
 
   return (
-    <div className="grid grid-cols-3 gap-[1px] border-[#454545] border-[1px] rounded-xl overflow-clip bg-[#7d7d7d]">
+    <div className="relative grid grid-cols-3 gap-[1px] border-[#454545] border-[1px] rounded-xl overflow-clip bg-[#7d7d7d]">
+      <WinnerCombo />
       {cellList}
     </div>
   );

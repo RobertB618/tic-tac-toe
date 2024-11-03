@@ -4,6 +4,7 @@ import './App.css';
 import useTicStore from './store';
 import { useEffect } from 'react';
 
+
 function App() {
 
   const addPlayer = useTicStore((state) => state.actions.createPlayer);
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="flex justify-center  w-screen h-screen text-white">
       <GameLayout />
+    
     </div>
   );
 }
