@@ -19,7 +19,7 @@ This repository contains a Tic-Tac-Toe game built using React and Zustand for st
 - Responsive and visually appealing UI.
 
 ## Live Demo
-The hosted version of this application can be accessed through **GitHub Pages**:  
+The hosted version of this application can be accessed through **Vercel**:  
 [Play Tic-Tac-Toe Live](https://tic-tac-toe-beta-kohl-69.vercel.app/)
 
 ## Getting Started
@@ -74,5 +74,5 @@ In the project directory, you can run:
 - **React**: A JavaScript library for building user interfaces.
 - **Zustand**: A small, fast, and scalable state management solution for React.
 - **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
-- **GitHub Pages**: For hosting the live version of the application.
+- **Vercel**: For hosting the live version of the application.
 
